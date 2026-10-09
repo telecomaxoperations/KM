@@ -1901,7 +1901,7 @@ const todayISO = () => {
 };
 const dayName = (iso) => new Date(iso+'T00:00:00').toLocaleDateString('en-US',{weekday:'long'});
 const genId = () => (crypto.randomUUID ? crypto.randomUUID() : 'id-'+Date.now()+'-'+Math.random().toString(16).slice(2));
-const DEFAULT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyPpI27VQqpIrZHn8mizmONCLHEbp_aJj_wnan6nyYh-0R2bNW_C7qbYuAHQvRgwS5_fg/exec';
+const DEFAULT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzTJ17EfiuTqLHif-ByShqSHv-o2ToRC1KhFcDgc5CVVDuVdrObGzSM4kUqz98FdfBX1g/exec';
 const DEFAULT_SHARED_TOKEN = 'CHANGE-ME-TO-A-SECRET';
 
 // ---------- side menu ----------
@@ -2086,7 +2086,7 @@ $('loginBtn').onclick = async () => {
       localStorage.removeItem('tmx_portal_user_persist');
       localStorage.removeItem('tmx_portal_user');
     }catch(_e){}
-    location.replace('https://tmxportal.vercel.app/?logout=1');
+    location.replace('https://telecomaxportal.vercel.app/?logout=1');
     return;
     delete settings.engineer; delete settings.pin; delete settings.projectName; delete settings.defaultDriver;
     engineerSessionToken=''; engineerSessionName=''; sessionStorage.removeItem('tmx_km_engineer_token'); sessionStorage.removeItem('tmx_km_engineer_name');
@@ -3926,7 +3926,7 @@ function portalSSOStatus_(title,detail){ document.documentElement.classList.remo
 
 <script id="v8323UnifiedPortalLogout">
 (function(){
- const PORTAL_LOGIN='https://tmxportal.vercel.app/?logout=1';
+ const PORTAL_LOGIN='https://telecomaxportal.vercel.app/?logout=1';
  function isLogoutTarget(el){
    const b=el&&el.closest?el.closest('button,a'):null;if(!b)return false;
    const id=String(b.id||'').toLowerCase(),txt=String(b.textContent||'').trim().toLowerCase();
